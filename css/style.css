@@ -1,0 +1,45 @@
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
+hr{
+    width: 98%;
+}
+
+.icon-logo{
+    border: 2px solid;
+    height: 50px;
+    width: 50px;
+}
+
+nav>a{
+    border: 1px solid;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+.home-section{
+    padding: 32px;
+}
+.banner-container{
+    height: 350px;
+    width: 100%;
+    border: 2px solid;
+}
+.profile-section{
+    padding: 32px;
+}
+.profile-content{
+    display: flex;
+    justify-content: space-around
+}
+
+.profile-img{
+    border: 2px solid;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%
+}
