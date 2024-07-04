@@ -1,45 +1,258 @@
+
+body{
+    max-width: 100%;
+}
+
 .nav-container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-left: 32px;
     padding-right: 32px;
+
 }
 
-hr{
-    width: 98%;
-}
 
 .icon-logo{
-    border: 2px solid;
     height: 50px;
     width: 50px;
+    padding: 20px;
 }
+
 
 nav>a{
-    border: 1px solid;
     padding-left: 32px;
     padding-right: 32px;
-}
-.home-section{
-    padding: 32px;
-}
-.banner-container{
-    height: 350px;
-    width: 100%;
-    border: 2px solid;
-}
-.profile-section{
-    padding: 32px;
-}
-.profile-content{
-    display: flex;
-    justify-content: space-around
+    color: inherit;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 
-.profile-img{
-    border: 2px solid;
-    height: 50px;
-    width: 50px;
-    border-radius: 100%
+nav>a:hover{
+    color: yellow;
+    font-weight: Bold;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5); 
+    overflow: auto; 
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    border-radius: 8px;
+    max-width: 400px;
+    text-align: center;
+}
+
+/* Close button styles */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.home-section{
+    align-items: center;
+    padding: 32px;
+    
+    header{
+        padding: 32px;
+    }
+}
+.home-text{
+    position: absolute;
+    color: #ffff;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    margin: auto;
+    margin-left: 50px;
+}
+
+.banner-img{
+    height: 100%;
+    width: 100%;
+    height: auto;
+    border: 0;
+    padding: 0;
+}
+.banner-img img {
+    width: 100%;
+    height: auto; 
+    display: block; 
+}
+
+.banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+.banner-text h1 {
+    font-size: 2.5rem; 
+    margin: 0; 
+}
+
+
+.services-section{
+    padding: 32px;
+    text-align: center;
+    align-items: center;
+    background-color: rgb(48, 48, 48);
+    color: #ffff;
+    
+}
+
+.services {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    flex-wrap: wrap;
+    gap: 20px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.card-services {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #d1dd26; 
+}
+
+.card-services p {
+    margin-top: 50px;
+    font-weight: bold;
+    font-size: 17px;
+    color: #2b2b2b;
+}
+
+.services-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-size: cover;
+    background-position: center;
+    margin: 0 auto 10px; 
+}
+
+.services-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 32px;
+}
+
+.half-width {
+    flex: 0 0 50%; 
+}
+
+.message-us-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+    
+}
+
+.message-us-content {
+    margin-right: 20px; 
+}
+
+#displayBox {
+    margin: 100px;
+    padding: 50px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    width: calc(50% - 40px); 
+    box-sizing: border-box;
+}
+
+
+#contactme {
+    width: 100%; 
+}
+
+#contactme table {
+    width: 100%; 
+}
+
+#contactme td {
+    padding: 10px; 
+    width: 50%; 
+}
+
+#contactme label {
+    display: inline-block;
+    width: 100%;
+    font-weight: bold;
+}
+
+#contactme input[type="text"],
+#contactme input[type="date"],
+#contactme textarea {
+    width: calc(100% - 20px);
+    padding: 8px; 
+    font-size: 14px; 
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; 
+}
+
+#contactme textarea {
+    height: 120px;
+}
+
+#contactme input[type="radio"] {
+    margin-right: 10px; 
+    vertical-align: middle;
+}
+
+#contactme button {
+    width: 100%; 
+    padding: 10px 20px; 
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+#contactme button:hover {
+    background-color: #45a049;
 }

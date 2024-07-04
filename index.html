@@ -8,52 +8,117 @@
 </head>
 <body>
     <header class="nav-container">
-        <div class="icon-logo"></div>
+        <div class="icon-logo">
+            <img src="assets/Logo-RevoU.png" width="50px" height="50px">
+        </div>
         <nav>
             <a href="#">Home</a>
-            <a href="#">Our Profile</a>
-            <a href="#">Message Us</a>
+            <a href="#our-services">Services</a>
+            <a href="#contactme">Message Us</a>
         </nav>
     </header>
-    
-    <hr>
 
     <main>
-        <!-- Home content -->
-         <section class="home-section">
+
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Welcome to my portfolio Website!</h2>
+            <p>Masukan Nama Kamu</p>
+            <input type="text" id="username" placeholder="Your Name" autofocus>
+            <button onclick="saveUsername()">Submit</button>
+        </div>
+        </div>
+        <header class="home-text">
+            <h1 id="greeting">Hi User, Welcome to the my portfolio website</h1>
+        </header>
+
+            <div class="banner-img">
+
+                <img src="assets/banner.avif" alt="">
+            </div>
+        </section>
+        <!-- End Home content -->
+    
+        <!-- Our Profile section-->
+        <section class="services-section" id="our-services">
             <header>
-                <h1>Hi User, Welcome to website</h1>
+                <h1>Services</h1>
             </header>
 
-            <article>
-                <p>Website portfolio saya</p>
-
-                <div class="banner-container"></div>
-            </article>
-         </section>
-        <!-- Our Profile -->
-
-        <section class="profile-section">
-            <header>
-                <h1>Our Profile</h1>
-            </header>
-
-            <article class="profile-content">
-                <div class=""> 
-                    <div class="profile-img"></div>
-                    <p>Profile 1</p>
+            <article class="services">
+                <div class="card-services"> 
+                    <div class="services-img ">
+                        <img src="assets/img1.png" alt="">
+                    </div>
+                    <p>Photo Retoucher</p>
                 </div>
-                <div class=""> 
-                    <div class="profile-img"></div>
-                    <p>Profile 2</p>
+                <div class="card-services"> 
+                    <div class="services-img">
+                        <img src="assets/img2.png" alt="">
+                    </div>
+                    <p>UI/UX Design</p>
                 </div>
-                <div class=""> 
-                    <div class="profile-img"></div>
-                    <p>Profile 3</p>
+                <div class="card-services"> 
+                    <div class="services-img">
+                        <img src="assets/img3.png" alt="">
+                    </div>
+                    <p>Fullstack Web Developer</p>
                 </div>
             </article>
         </section>
+        <!-- end our profile section -->
+
+        
         <!-- Message Us -->
+        <div class="container">
+            <div class="half-width">
+                <section class="message-us-section">
+                    <div class="message-us-content">
+                        <h1>Contact Me</h1>
+                        
+                        <form action="#" method="post" id="contactme">
+                            <table>
+                                <tr>
+                                    <td><label for="name">Nama :</label></td>
+                                    <td><input type="text" id="name" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="datebirth">Tanggal Lahir :</label></td>
+                                    <td><input type="date" id="datebirth" required></td>
+                                </tr>
+                                <tr>
+                                    <td><label for="gender">Jenis Kelamin :</label></td>
+                                    <td>
+                                        <input type="radio" name="gender" id="male" value="male">Laki-Laki
+                                        <input type="radio" name="gender" id="female" value="female">Perempuan
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td><label for="message">Pesan :</label></td>
+                                    <td><textarea name="message" id="message" cols="30" rows="8" required></textarea></td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <button type="button" onclick="validateForm();">Submit</button>
+                                    </td>
+                                </tr>
+                            </table>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        
+            <div class="half-width">
+                <!-- Display box for form output -->
+                <div id="displayBox" class="display-box"></div>
+            </div>
+        </div>
+        
+        <!-- end message us section -->
     </main>
 </body>
+
+<script src="js/script.js"></script>
 </html>
